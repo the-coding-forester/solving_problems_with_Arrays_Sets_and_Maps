@@ -3,10 +3,15 @@
  * @param {string} s1
  * @param {string} s2
  */
-function anagram(s1, s2) {
+const anagram = (s1, s2) => {
   const a1 = s1.toLowerCase().split("");
   const a2 = s2.toLowerCase().split("");
 
+  return isEqual(a1, a2);
+
+}
+
+const isEqual = (a1, a2) => {
   if (a1.length !== a2.length) {
     return false;
   }
