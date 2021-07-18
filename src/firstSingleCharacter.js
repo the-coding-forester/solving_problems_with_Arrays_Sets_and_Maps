@@ -1,7 +1,4 @@
-/**
- * Return the first character in the string that occurs only once.
- * @param {string} word the string to be analysed
- */
+
 function firstSingleCharacter(word) {
   const wordArray = word.toLowerCase().split("");
   const wordMap = new Map();
@@ -14,12 +11,16 @@ function firstSingleCharacter(word) {
     };
   })
 
-  wordMap.forEach((letter) => {
-    if (wordMap.get(letter) === 1) {
-      return letter;
+  let desiredLetter = null;
+
+  wordMap.forEach((value, letter) => {
+    if (value === 1) {
+      if (desiredLetter === null) {
+        desiredLetter = letter;
+      }
     }
   })
-  return null;
+  return desiredLetter;
 }
 
 module.exports = firstSingleCharacter;

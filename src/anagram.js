@@ -1,8 +1,4 @@
-/**
- * Return true if s1 is an anagram of s2
- * @param {string} s1
- * @param {string} s2
- */
+
 const anagram = (s1, s2) => {
   const a1 = s1.toLowerCase().split("");
   const a2 = s2.toLowerCase().split("");
